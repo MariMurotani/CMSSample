@@ -8,6 +8,11 @@
 
 import Cocoa
 
-class TreeViewController: NSTreeController {
+class TreeViewController: NSViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do view setup here.
+    }
+    
 }

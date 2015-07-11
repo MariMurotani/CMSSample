@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B38136B01B50ED1C00669CFB /* TreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38136AF1B50ED1C00669CFB /* TreeViewController.swift */; };
+		B347B8BB1B512E130090D080 /* TreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B347B8B91B512E130090D080 /* TreeViewController.swift */; };
 		B3A663E01B50BF7800A3B0BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A663DF1B50BF7800A3B0BA /* AppDelegate.swift */; };
 		B3A663E21B50BF7800A3B0BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A663E11B50BF7800A3B0BA /* ViewController.swift */; };
 		B3A663E51B50BF7800A3B0BA /* CMSSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3A663E31B50BF7800A3B0BA /* CMSSample.xcdatamodeld */; };
@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B38136AF1B50ED1C00669CFB /* TreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeViewController.swift; sourceTree = "<group>"; };
+		B347B8B91B512E130090D080 /* TreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeViewController.swift; sourceTree = "<group>"; };
 		B3A663DC1B50BF7800A3B0BA /* CMSSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CMSSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A663DF1B50BF7800A3B0BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3A663E11B50BF7800A3B0BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 				B3A663E81B50BF7800A3B0BA /* Main.storyboard */,
 				B3A663EB1B50BF7800A3B0BA /* Info.plist */,
 				B3A663E31B50BF7800A3B0BA /* CMSSample.xcdatamodeld */,
-				B38136AF1B50ED1C00669CFB /* TreeViewController.swift */,
+				B347B8B91B512E130090D080 /* TreeViewController.swift */,
 			);
 			path = CMSSample;
 			sourceTree = "<group>";
@@ -259,7 +259,7 @@
 			files = (
 				B3A663E51B50BF7800A3B0BA /* CMSSample.xcdatamodeld in Sources */,
 				B3A663E21B50BF7800A3B0BA /* ViewController.swift in Sources */,
-				B38136B01B50ED1C00669CFB /* TreeViewController.swift in Sources */,
+				B347B8BB1B512E130090D080 /* TreeViewController.swift in Sources */,
 				B3A663E01B50BF7800A3B0BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

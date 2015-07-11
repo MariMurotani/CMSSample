@@ -669,8 +669,8 @@
             <objects>
                 <splitViewController title="MainDashBoad" id="GlM-mq-mbA" sceneMemberID="viewController">
                     <splitViewItems>
-                        <splitViewItem collapsed="YES" id="Yq0-w3-0xv"/>
-                        <splitViewItem id="riO-Ka-sfi"/>
+                        <splitViewItem canCollapse="YES" id="Yq0-w3-0xv"/>
+                        <splitViewItem canCollapse="YES" id="riO-Ka-sfi"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="ktF-g8-RUV">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -689,7 +689,7 @@
         <scene sceneID="6GL-fy-Fh5">
             <objects>
                 <customObject id="FWm-k5-ukN" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController title="TreeMenu" id="B7A-aM-Jqg" sceneMemberID="viewController">
+                <viewController title="TreeMenu" id="B7A-aM-Jqg" customClass="TreeViewController" customModule="CMSSample" customModuleProvider="target" sceneMemberID="viewController">
                     <scrollView key="view" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" maxMagnification="4.2999999999999998" minMagnification="4.2999999999999998" id="V2v-SO-fne">
                         <rect key="frame" x="0.0" y="0.0" width="239" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -698,7 +698,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="n5e-ZW-ID2" viewBased="YES" indentationPerLevel="16" outlineTableColumn="sb5-yS-noT" id="Iv1-2l-3k8">
-                                    <rect key="frame" x="0.0" y="0.0" width="237" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="236" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -736,7 +736,7 @@
                                                 </tableCellView>
                                             </prototypeCellViews>
                                         </tableColumn>
-                                        <tableColumn width="114.57897091838208" minWidth="40" maxWidth="1000" id="ZCi-JW-2IQ">
+                                        <tableColumn width="114.43457415539628" minWidth="40" maxWidth="1000" id="ZCi-JW-2IQ">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -774,10 +774,10 @@
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="K9P-yY-iYt">
-                            <rect key="frame" x="1" y="284" width="448" height="15"/>
+                            <rect key="frame" x="1" y="284" width="237" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="6.3279122799803736e-10" horizontal="NO" id="UtN-Tp-Eb2">
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="UtN-Tp-Eb2">
                             <rect key="frame" x="-14" y="9" width="15" height="0.0"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
