@@ -15,9 +15,13 @@ import Cocoa
 
 class TreeViewController: NSViewController,NSOutlineViewDataSource,NSOutlineViewDelegate{
 
+    //@IBOutlet var TreeMenu: NSScrollView!
+    @IBOutlet weak var MyTableView: NSOutlineView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        
         
     }
 
