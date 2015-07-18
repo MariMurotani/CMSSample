@@ -667,21 +667,29 @@
         <!--MainDashBoad-->
         <scene sceneID="pkw-k9-YP2">
             <objects>
-                <splitViewController title="MainDashBoad" id="GlM-mq-mbA" sceneMemberID="viewController">
+                <splitViewController title="MainDashBoad" id="GlM-mq-mbA" customClass="SplitViewController" customModule="CMSSample" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
-                        <splitViewItem canCollapse="YES" id="Yq0-w3-0xv"/>
+                        <splitViewItem canCollapse="YES" holdingPriority="100" id="Yq0-w3-0xv"/>
                         <splitViewItem canCollapse="YES" id="riO-Ka-sfi"/>
                     </splitViewItems>
-                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="ktF-g8-RUV">
+                    <splitView key="splitView" focusRingType="exterior" arrangesAllSubviews="NO" autosaveName="SplitViewSave" vertical="YES" id="ktF-g8-RUV">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <binding destination="sga-tt-wdb" name="hidden" keyPath="values.representedObject" id="xAW-J1-M2K"/>
+                        </connections>
                     </splitView>
                     <connections>
+                        <outlet property="SplitView" destination="ktF-g8-RUV" id="594-vp-D06"/>
+                        <outlet property="SplitView1" destination="ktF-g8-RUV" id="u1M-GF-Veh"/>
+                        <outlet property="SplitViewItem1" destination="Yq0-w3-0xv" id="jLO-dc-aB3"/>
+                        <outlet property="SplitViewItem2" destination="riO-Ka-sfi" id="ecs-NI-zsZ"/>
                         <segue destination="B7A-aM-Jqg" kind="relationship" relationship="splitItems" id="xqh-Nx-hoi"/>
                         <segue destination="o1I-Ve-mka" kind="relationship" relationship="splitItems" id="uPs-zm-9QD"/>
                     </connections>
                 </splitViewController>
                 <customObject id="UyE-w4-wdW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="sga-tt-wdb"/>
             </objects>
             <point key="canvasLocation" x="75" y="673"/>
         </scene>
@@ -690,7 +698,7 @@
             <objects>
                 <customObject id="FWm-k5-ukN" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController title="TreeMenu" id="B7A-aM-Jqg" customClass="TreeViewController" customModule="CMSSample" customModuleProvider="target" sceneMemberID="viewController">
-                    <scrollView key="view" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" maxMagnification="4.2999999999999998" minMagnification="4.2999999999999998" id="V2v-SO-fne">
+                    <scrollView key="view" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" maxMagnification="4.2999999999999998" minMagnification="4.2999999999999998" verticalScrollElasticity="none" scrollerKnobStyle="dark" id="V2v-SO-fne">
                         <rect key="frame" x="0.0" y="0.0" width="239" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <clipView key="contentView" placeholderIntrinsicWidth="237" placeholderIntrinsicHeight="282" id="fAM-7J-Xvf">
@@ -698,7 +706,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="n5e-ZW-ID2" viewBased="YES" indentationPerLevel="16" outlineTableColumn="sb5-yS-noT" id="Iv1-2l-3k8">
-                                    <rect key="frame" x="0.0" y="0.0" width="236" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="237" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -718,7 +726,7 @@
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <prototypeCellViews>
                                                 <tableCellView id="c8C-CL-5Zy">
-                                                    <rect key="frame" x="1" y="1" width="116" height="17"/>
+                                                    <rect key="frame" x="1" y="1" width="116.04056438138969" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="01L-z4-jmF">
@@ -736,7 +744,7 @@
                                                 </tableCellView>
                                             </prototypeCellViews>
                                         </tableColumn>
-                                        <tableColumn width="114.43457415539628" minWidth="40" maxWidth="1000" id="ZCi-JW-2IQ">
+                                        <tableColumn width="115.25676829039827" minWidth="40" maxWidth="1000" id="ZCi-JW-2IQ">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -769,19 +777,15 @@
                                             </prototypeCellViews>
                                         </tableColumn>
                                     </tableColumns>
-                                    <connections>
-                                        <outlet property="dataSource" destination="B7A-aM-Jqg" id="oGx-AH-Bfc"/>
-                                        <outlet property="delegate" destination="B7A-aM-Jqg" id="oLj-PZ-iaZ"/>
-                                    </connections>
                                 </outlineView>
                             </subviews>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </clipView>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="K9P-yY-iYt">
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="K9P-yY-iYt">
                             <rect key="frame" x="1" y="284" width="237" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="UtN-Tp-Eb2">
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1.9910984849424095e-10" horizontal="NO" id="UtN-Tp-Eb2">
                             <rect key="frame" x="-14" y="9" width="15" height="0.0"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
@@ -789,7 +793,13 @@
                             <rect key="frame" x="0.0" y="0.0" width="237" height="17"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
+                        <connections>
+                            <binding destination="B7A-aM-Jqg" name="hidden" keyPath="self.SplitViewItem2" id="6f0-vj-dd5"/>
+                        </connections>
                     </scrollView>
+                    <connections>
+                        <outlet property="TreeView" destination="V2v-SO-fne" id="dNQ-WY-QXH"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="567.5" y="295"/>
