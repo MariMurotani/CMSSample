@@ -7,6 +7,8 @@
 //
 /*
 https://github.com/danielpi/NSOutlineViewInSwift/blob/master/NSOutlineViewInSwift/NSOutlineViewInSwift/FileSystemItem.swift
+
+http://stackoverflow.com/questions/24828553/swift-code-to-use-nsoutlineview-as-file-system-directory-browser
 */
 
 import Cocoa
@@ -40,7 +42,7 @@ class TreeViewController: NSViewController,NSOutlineViewDataSource,NSOutlineView
             return it.childAtIndex(index)!
         } else {
             print("child:ofItem: return the rootItem")
-            return new TableCell(FileSystemItem.rootItem);
+            return FileSystemItem.rootItem;
         }
     }
     

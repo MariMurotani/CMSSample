@@ -664,26 +664,54 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--MainDashBoad-->
+        <!--View Controller-->
+        <scene sceneID="QB4-uq-Eu8">
+            <objects>
+                <viewController id="Voo-aI-45w" sceneMemberID="viewController">
+                    <view key="view" id="PCm-Fw-jrK">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="wu5-8z-Abr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="639" y="284"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pgB-Kl-b3I">
+            <objects>
+                <viewController id="1Hl-hP-0je" sceneMemberID="viewController">
+                    <view key="view" id="gNr-eu-7so">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="p11-kh-0kC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="639" y="645"/>
+        </scene>
+        <!--SplitViewController-->
         <scene sceneID="pkw-k9-YP2">
             <objects>
-                <splitViewController title="MainDashBoad" id="GlM-mq-mbA" sceneMemberID="viewController">
+                <splitViewController title="MainDashBoad" id="GlM-mq-mbA" userLabel="SplitViewController" customClass="SplitViewController" customModule="CMSSample" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
-                        <splitViewItem canCollapse="YES" id="Yq0-w3-0xv"/>
-                        <splitViewItem canCollapse="YES" id="riO-Ka-sfi"/>
+                        <splitViewItem canCollapse="YES" id="Yq0-w3-0xv" userLabel="Split View Item"/>
+                        <splitViewItem canCollapse="YES" id="riO-Ka-sfi" userLabel="Split View Item"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="ktF-g8-RUV">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </splitView>
                     <connections>
+                        <outlet property="MySplitView" destination="ktF-g8-RUV" id="t2w-bH-ZUX"/>
+                        <outlet property="SplitView" destination="ktF-g8-RUV" id="o7x-6z-ykx"/>
                         <segue destination="B7A-aM-Jqg" kind="relationship" relationship="splitItems" id="xqh-Nx-hoi"/>
                         <segue destination="o1I-Ve-mka" kind="relationship" relationship="splitItems" id="uPs-zm-9QD"/>
                     </connections>
                 </splitViewController>
                 <customObject id="UyE-w4-wdW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="673"/>
+            <point key="canvasLocation" x="75" y="754"/>
         </scene>
         <!--TreeMenu-->
         <scene sceneID="6GL-fy-Fh5">

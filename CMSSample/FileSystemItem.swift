@@ -89,4 +89,8 @@ public class FileSystemItem: NSObject {
             return (relativePath == "/") ? relativePath : "/" + (relativePath as String)
         }
     }
+
+    public func toString() -> String{
+        return relativePath;
+    }
 }
