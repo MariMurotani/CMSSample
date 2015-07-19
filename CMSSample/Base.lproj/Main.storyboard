@@ -719,7 +719,7 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
-                                        <tableColumn width="115.06912499140968" minWidth="40" maxWidth="1000" id="ZCi-JW-2IQ">
+                                        <tableColumn width="112.6304348135252" minWidth="40" maxWidth="1000" id="ZCi-JW-2IQ">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -741,7 +741,7 @@
                             </subviews>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </clipView>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.5" horizontal="YES" id="K9P-yY-iYt">
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="K9P-yY-iYt">
                             <rect key="frame" x="1" y="284" width="237" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
@@ -767,19 +767,19 @@
                         <menuItem title="AddDIrectory" id="rsu-ua-cCU">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
-                                <segue destination="CAG-rB-Dcz" kind="show" id="AOG-Uz-sdy"/>
+                                <segue destination="CAG-rB-Dcz" kind="show" identifier="IAddDirectory" id="AOG-Uz-sdy"/>
                             </connections>
                         </menuItem>
                         <menuItem title="AddFile" id="lGe-KO-fyY">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
-                                <segue destination="CAG-rB-Dcz" kind="modal" id="mLn-IU-W79"/>
+                                <segue destination="OeL-Bn-R2N" kind="show" id="bYC-Hg-dmq"/>
                             </connections>
                         </menuItem>
                         <menuItem title="Remove" id="qUz-FO-rJt">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
-                                <segue destination="3wp-8d-tBN" kind="show" id="zhA-j5-Aak"/>
+                                <segue destination="3wp-8d-tBN" kind="show" identifier="IRemove" id="zhA-j5-Aak"/>
                             </connections>
                         </menuItem>
                     </items>
@@ -787,56 +787,48 @@
             </objects>
             <point key="canvasLocation" x="642.5" y="387"/>
         </scene>
-        <!--File Types Controller-->
+        <!--NewDirectory-->
         <scene sceneID="nyJ-lL-Iai">
             <objects>
-                <viewController id="CAG-rB-Dcz" customClass="FileTypesController" customModule="CMSSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="New" id="CAG-rB-Dcz" userLabel="NewDirectory" customClass="FileTypesController" customModule="CMSSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="GOg-ST-s1c">
-                        <rect key="frame" x="0.0" y="0.0" width="269" height="101"/>
+                        <rect key="frame" x="0.0" y="0.0" width="269" height="76"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8pm-u4-yup">
-                                <rect key="frame" x="101" y="0.0" width="66" height="32"/>
-                                <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lWv-ED-RpC">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g11-Nk-dMv">
-                                <rect key="frame" x="10" y="68" width="248" height="22"/>
+                                <rect key="frame" x="10" y="43" width="248" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="GGk-L2-IX4">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jnt-L9-fcD">
-                                <rect key="frame" x="10" y="36" width="251" height="26"/>
-                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesDataSource="YES" numberOfVisibleItems="5" id="F27-J4-u5G">
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8pm-u4-yup">
+                                <rect key="frame" x="101" y="2" width="66" height="32"/>
+                                <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lWv-ED-RpC">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </comboBoxCell>
+                                </buttonCell>
                                 <connections>
-                                    <outlet property="dataSource" destination="nKR-Y1-4tx" id="NyK-PE-XVn"/>
+                                    <action selector="DirecotryAdd:" target="CAG-rB-Dcz" id="MgQ-qh-H4g"/>
                                 </connections>
-                            </comboBox>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="FileTypes" destination="jnt-L9-fcD" id="RVn-VZ-Vqg"/>
-                        <outlet property="FileTypesController" destination="nKR-Y1-4tx" id="DqU-a3-YIe"/>
+                        <outlet property="ArrayFileTypesController" destination="nKR-Y1-4tx" id="KZr-QJ-TmG"/>
+                        <outlet property="BtAddDirecotry" destination="8pm-u4-yup" id="WuO-Gi-3WN"/>
                     </connections>
                 </viewController>
                 <customObject id="vdT-Pl-7JZ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController mode="entity" entityName="" fetchPredicateFormat="" editable="NO" automaticallyPreparesContent="YES" automaticallyRearrangesObjects="YES" id="nKR-Y1-4tx"/>
             </objects>
-            <point key="canvasLocation" x="1028.5" y="155.5"/>
+            <point key="canvasLocation" x="1028.5" y="39"/>
         </scene>
-        <!--View Controller-->
+        <!--Delete-->
         <scene sceneID="TkO-jo-2YE">
             <objects>
-                <viewController id="3wp-8d-tBN" sceneMemberID="viewController">
+                <viewController title="Delete" id="3wp-8d-tBN" customClass="FileTypesController" customModule="CMSSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="enz-rc-Xmr">
                         <rect key="frame" x="0.0" y="0.0" width="269" height="75"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -865,6 +857,10 @@
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="BtDeleteNo" destination="P2N-yX-VQE" id="cUc-OV-Ofv"/>
+                        <outlet property="BtDeleteYes" destination="eEB-9s-8VM" id="3BA-os-WQc"/>
+                    </connections>
                 </viewController>
                 <customObject id="N88-Kd-apR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -956,8 +952,54 @@
             </objects>
             <point key="canvasLocation" x="1398" y="1188"/>
         </scene>
+        <!--NewFile-->
+        <scene sceneID="0LE-pn-b4S">
+            <objects>
+                <viewController title="New" id="OeL-Bn-R2N" userLabel="NewFile" customClass="FileTypesController" customModule="CMSSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="xjf-Pe-Zqv">
+                        <rect key="frame" x="0.0" y="0.0" width="269" height="101"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iRn-vC-kQP">
+                                <rect key="frame" x="101" y="0.0" width="66" height="32"/>
+                                <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Daq-T0-2jS">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="doQ-wE-HvX">
+                                <rect key="frame" x="10" y="68" width="248" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="LHh-D7-kCF">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mnS-2J-Mq1">
+                                <rect key="frame" x="10" y="36" width="251" height="26"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesDataSource="YES" numberOfVisibleItems="5" id="hhw-uz-D3P">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </comboBoxCell>
+                                <connections>
+                                    <outlet property="dataSource" destination="nKR-Y1-4tx" id="Gfo-z2-IT2"/>
+                                    <outlet property="delegate" destination="xjf-Pe-Zqv" id="Nq4-gW-6a5"/>
+                                </connections>
+                            </comboBox>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="ArrayFileTypeList" destination="mnS-2J-Mq1" id="rOD-CM-CEH"/>
+                        <outlet property="ArrayFileTypesController" destination="Jsr-y7-afS" id="bG9-YS-kcI"/>
+                        <outlet property="BtAddFile" destination="iRn-vC-kQP" id="osN-mM-dux"/>
+                        <outlet property="FileTypes" destination="mnS-2J-Mq1" id="efb-1m-Ewy"/>
+                    </connections>
+                </viewController>
+                <customObject id="bbe-76-leW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <arrayController mode="entity" entityName="" fetchPredicateFormat="" editable="NO" automaticallyPreparesContent="YES" automaticallyRearrangesObjects="YES" id="Jsr-y7-afS"/>
+            </objects>
+            <point key="canvasLocation" x="1028.5" y="201.5"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="mLn-IU-W79"/>
-    </inferredMetricsTieBreakers>
 </document>

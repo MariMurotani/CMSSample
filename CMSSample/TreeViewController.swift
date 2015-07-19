@@ -42,10 +42,10 @@ class TreeViewController: NSViewController,NSOutlineViewDataSource,NSOutlineView
         // return (item == nil) ? [FileSystemItem rootItem] : [(FileSystemItem *)item childAtIndex:index];
         
         if let it = item as? FileSystemItem {
-            print("child: \(index) ofItem: \(it)")
+            //print("child: \(index) ofItem: \(it)")
             return it.childAtIndex(index)!
         } else {
-            print("child:ofItem: return the rootItem")
+            //print("child:ofItem: return the rootItem")
             return FileSystemItem.rootItem;
         }
     }
@@ -58,14 +58,14 @@ class TreeViewController: NSViewController,NSOutlineViewDataSource,NSOutlineView
         
         if let it = item as? FileSystemItem {
             if it.numberOfChildren() > 0 {
-                print("isItemExpandable: \(it): Yes")
+                //print("isItemExpandable: \(it): Yes")
                 return true
             } else {
-                print("isItemExpandable: \(it): No")
+                //print("isItemExpandable: \(it): No")
                 return false
             }
         } else {
-            print("isItemExpandable: rootItem: Yes")
+            //print("isItemExpandable: rootItem: Yes")
             return true
         }
     }
@@ -74,10 +74,10 @@ class TreeViewController: NSViewController,NSOutlineViewDataSource,NSOutlineView
         // return (item == nil) ? 1 : [item numberOfChildren];
         
         if let it = item as? FileSystemItem {
-            print("numberOfChildrenOfItem: \(it.numberOfChildren())")
+            //print("numberOfChildrenOfItem: \(it.numberOfChildren())")
             return it.numberOfChildren()
         }
-        print("numberOfChildrenOfItem: We have been passed the root object so we return 1")
+        //print("numberOfChildrenOfItem: We have been passed the root object so we return 1")
         return 1
 
     }
@@ -86,7 +86,7 @@ class TreeViewController: NSViewController,NSOutlineViewDataSource,NSOutlineView
         // return (item == nil) ? @"/" : [item relativePath];
         
         if let item = byItem as? FileSystemItem {
-            print("objectValueForTableColumn:byItem: \(item)")
+            //print("objectValueForTableColumn:byItem: \(item)")
             return item.relativePath
         }
         return nil
